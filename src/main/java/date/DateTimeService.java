@@ -9,7 +9,7 @@ import java.util.Date;
 @Slf4j
 public class DateTimeService {
 
-    public void todayDate() {
+    public static void todayDate() {
         Date date = new Date();
         Calendar calendar = Calendar.getInstance();
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -17,5 +17,12 @@ public class DateTimeService {
         log.info("Date : " + date);
         log.info("Calendar : " + calendar);
         log.info("LocalDateTime : " + localDateTime);
+
+        calendar.getTime();
+        log.info(calendar.getTime().toString());
+    }
+
+    public static void main(String[] args) {
+        todayDate();
     }
 }
